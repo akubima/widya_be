@@ -1,0 +1,12 @@
+node_modules
+dist
+.env
+*.log
+.git
+.idea
+.junie
+.gitignore
+.dockerignore
+docker-compose.yml
+README.md
+postman_collection.json
