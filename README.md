@@ -184,11 +184,11 @@ Barang X memiliki stok tersisa = 1. Dua user (A dan B) secara bersamaan melakuka
 
 ```
 Waktu  │  User A                          │  User B
-───────┼──────────────────────────────────┼────────────────────────────────
+───────┼──────────────────────────────────┼──────────────────────────────────────────────
 t1     │  SELECT stock;  Hasil: 1         │
 t2     │                                  │  SELECT stock; Hasil: 1
 t3     │  Check: 1 > 0 (OK); stock = 0    │
-t4     │                                  │  Check: 1 > 0 (X); stock = -1 ❌
+t4     │                                  │  Check: 1 > 0 (OK); stock = -1 (NOT ALLOWED)
 ```
 
 Kedua user membaca stok = 1 sebelum yang lain sempat menyimpan pembaruan. Ini disebut **Race Condition** atau **TOCTOU (Time-of-Check to Time-of-Use) Bug**.
